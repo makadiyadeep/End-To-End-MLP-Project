@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      animation: slideDown 1.5s ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #4e54c8;
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Floating background circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .circle:nth-child(1) {
+      width: 150px;
+      height: 150px;
+      top: 20%;
+      left: 15%;
+    }
+
+    .circle:nth-child(2) {
+      width: 100px;
+      height: 100px;
+      bottom: 25%;
+      right: 20%;
+    }
+
+    .circle:nth-child(3) {
+      width: 200px;
+      height: 200px;
+      bottom: 10%;
+      left: 25%;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Floating circles for decoration -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <div class="container">
+    <h1>Welcome to the Student Exam Performance Indicator</h1>
+    <a href="/predictdata" class="btn">Get Started</a>
+  </div>
+</body>
+</html>
