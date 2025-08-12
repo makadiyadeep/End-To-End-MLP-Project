@@ -50,8 +50,8 @@ class DataTransformation:
                 ]
             )
 
-            logging.info("Numrical columns: {numerical_columns}")
-            logging.info("Categorical columns: {categorical_columns}")
+            logging.info(f"Numerical columns: {numerical_columns}")
+            logging.info(f"Categorical columns: {categorical_columns}")
 
             preprocessor=ColumnTransformer(
                 [
@@ -71,7 +71,7 @@ class DataTransformation:
             train_df=pd.read_csv(train_path)
             test_df=pd.read_csv(test_path)
 
-            logging.info("Read train and test dat completed")
+            logging.info("Read train and test data completed")
             logging.info("Obtaining preprocessing object")
 
             preprocessing_obj=self.get_data_transfromer_object()
